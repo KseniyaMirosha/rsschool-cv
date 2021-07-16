@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background: url("assets/photo.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0 25%;
+}
+header .text {
+  padding: 15% 5%;
+  background: rgba(255, 255, 255, 0.5);
+}
+header .text-wrapper {
+  box-shadow: 0 0 5px white;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding: 5%;
+  background: rgba(255, 255, 255, 0.6);
+}
+header h1,
+header h2 {
+  margin-bottom: 15px;
+}
+header h3 {
+  margin-bottom: 5px;
+}
+header span {
+  font-weight: 700;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+main section {
+  max-width: 100%;
+  position: relative;
+}
+main .section-text {
+  opacity: 0;
+  margin: 5% auto;
+}
+main .section-text h3 {
+  margin-bottom: 20px;
+}
+main section:hover .section-text {
+  opacity: 1;
+  padding: 2%;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+main section .title {
+  opacity: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+main section .title p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main section:hover .title {
+  display: none;
+  transition-duration: 0.5s;
+}
+.about-me {
+  grid-column: 1 / span 2;
+  background-color: darkred;
+}
+.about-me .title p {
+  color: white;
+}
+main .about-me:hover {
+  background-color: white;
+  border: 2px solid darkred;
+  border-top: none;
+}
+.education,
+.working-experience {
+  background-color: black;
+}
+.education .title p,
+.working-experience .title p {
+  color: white;
+}
+main .education:hover {
+  background-color: white;
+  border: 2px solid black;
+  border-left: none;
+  border-bottom: none;
+}
+main .english-skills:hover {
+  background-color: white;
+}
+.working-experience {
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+main .working-experience:hover {
+  background-color: white;
+}
+
+footer {
+  background-color: #313940;
+}
+.footer-container {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.github {
+  display: block;
+  width: auto;
+  height: 45px;
+  padding-left: 45px;
+  background-image: url("assets/github.svg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 45px;
+  color: #cbd5de;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+}
+.github:hover {
+  color: #fff;
+}
+.rss {
+  display: block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  width: 86px;
+  height: 32px;
+  background-image: url("assets/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 111px;
+}
+.rss-year {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 21px;
+  letter-spacing: -2px;
+  color: #cbd5de;
+  line-height: 0.9;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.rss:hover .rss-year {
+  right: -5px;
+  letter-spacing: 0;
+}
