@@ -22,7 +22,7 @@ a {
 }
 
 header {
-  background: url(photo.jpg) no-repeat;
+  background: url("assets/photo.jpg") no-repeat;
   background-size: cover;
   background-position: 0 25%;
 }
@@ -42,6 +42,12 @@ header h1,
 header h2 {
   margin-bottom: 15px;
 }
+header h3 {
+  margin-bottom: 5px;
+}
+header span {
+  font-weight: 700;
+}
 
 main {
   display: grid;
@@ -54,6 +60,7 @@ main section {
 }
 main .section-text {
   opacity: 0;
+  margin: 5% auto;
 }
 main .section-text h3 {
   margin-bottom: 20px;
@@ -62,7 +69,7 @@ main section:hover .section-text {
   opacity: 1;
   padding: 2%;
   text-align: center;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 main section .title {
   opacity: 1;
@@ -80,18 +87,16 @@ main section .title p {
 }
 main section:hover .title {
   display: none;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 .about-me {
   grid-column: 1 / span 2;
-}
-.about-me {
   background-color: darkred;
 }
 .about-me .title p {
   color: white;
 }
-main .about-me:hover{
+main .about-me:hover {
   background-color: white;
   border: 2px solid darkred;
   border-top: none;
@@ -104,7 +109,7 @@ main .about-me:hover{
 .working-experience .title p {
   color: white;
 }
-main .education:hover{
+main .education:hover {
   background-color: white;
   border: 2px solid black;
   border-left: none;
@@ -119,4 +124,62 @@ main .english-skills:hover {
 }
 main .working-experience:hover {
   background-color: white;
+}
+
+footer {
+  background-color: #313940;
+}
+.footer-container {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.github {
+  display: block;
+  width: auto;
+  height: 45px;
+  padding-left: 45px;
+  background-image: url("assets/github.svg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 45px;
+  color: #cbd5de;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s;
+}
+.github:hover {
+  color: #fff;
+}
+.rss {
+  display: block;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  width: 86px;
+  height: 32px;
+  background-image: url("assets/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 111px;
+}
+.rss-year {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 21px;
+  letter-spacing: -2px;
+  color: #cbd5de;
+  line-height: 0.9;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.rss:hover .rss-year {
+  right: -5px;
+  letter-spacing: 0;
 }
